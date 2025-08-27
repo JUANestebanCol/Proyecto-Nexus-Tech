@@ -1,164 +1,178 @@
-@import url('https://fonts.googleapis.com/css2?family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Ubuntu:wght@300;400;500;700&display=swap');
 
+/* --- Reset global --- */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Ubuntu", sans-serif;
+  font-weight: 400;
+  background-color: #0e0e0e;
+  color: #f5f5f5;
+  line-height: 1.6;
+}
+
+/* --- Header --- */
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 5%;
+  background-color: rgba(15, 15, 15, 0.8);
+  backdrop-filter: blur(8px);
+  position: sticky;
+  top: 0;
+  z-index: 10;
+}
+
+.logo img {
+  width: 140px;
+  transition: transform 0.3s ease;
+}
+
+.logo img:hover {
+  transform: scale(1.05);
+}
+
+/* --- Navegación --- */
+nav ul {
+  display: flex;
+  list-style: none;
+  gap: 2rem;
+}
+
+nav ul li a {
+  text-decoration: none;
+  color: #f5f5f5;
+  font-weight: 500;
+  transition: color 0.3s ease;
+}
+
+nav ul li a:hover {
+  color: #ff9800;
+}
+
+button {
+  border: none;
+  border-radius: 12px;
+  padding: 0.6rem 1rem;
+  background: #ff9800;
+  color: white;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+button:hover {
+  background: #e67e22;
+  transform: translateY(-2px);
+  box-shadow: 0 6px 12px rgba(0,0,0,0.3);
+}
+
+/* --- Hero (títulos) --- */
+section h1 {
+  text-align: center;
+  font-size: 3rem;
+  margin-bottom: 1rem;
+  -webkit-text-stroke: 1px #070b26;
+}
+
+section h2 {
+  text-align: center;
+  font-size: 1.5rem;
+  font-weight: 300;
+  -webkit-text-stroke: 0.5px #070b26;
+}
+
+/* --- Fondo video --- */
+video {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  z-index: -1;
+  opacity: 0.5;
+}
+
+/* --- Carrusel --- */
 .contendedor-carrousel-1,
 .contendedor-carrousel-2 {
-    position: relative;
-    width: 80%;
-    margin: 20px auto;
-    overflow: hidden;
+  position: relative;
+  width: 90%;
+  margin: 3rem auto;
+  overflow: hidden;
 }
-
 
 .motor-carrousel {
-    display: flex;
-    transition: transform 0.5s ease-in-out;
+  display: flex;
+  transition: transform 0.5s ease-in-out;
 }
-
 
 .item-carrousel {
-    min-width: 33.33%;
-    box-sizing: border-box;
-    padding: 20px;
-    background-color: #f8f8f8;
-    border-radius: 8px;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-    margin-right: 20px; 
+  min-width: 33.33%;
+  box-sizing: border-box;
+  padding: 1rem;
+  background: rgba(255, 255, 255, 0.05);
+  border-radius: 12px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+  margin-right: 20px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
+.item-carrousel:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 16px rgba(0,0,0,0.4);
+}
 
 .item-carrousel img {
-    width: 100%;
-    height: auto;
-    border-radius: 8px;
+  width: 100%;
+  height: auto;
+  border-radius: 8px;
 }
-
 
 .item-carrousel h4 {
-    margin-top: 10px;
-    font-size: 1.2em;
-    color: #333;
+  margin-top: 0.8rem;
+  font-size: 1.1rem;
+  text-align: center;
+  color: #f5f5f5;
 }
 
-
+/* --- Botones carrusel --- */
 .btn-izquierda-carrousel,
 .btn-derecha-carrousel {
-    position: absolute;
-    top: 50%;
-    transform: translateY(-50%);
-    cursor: pointer;
-    background-color: rgba(0, 0, 0, 0.5);
-    color: white;
-    font-size: 2em;
-    border: none;
-    padding: 10px;
-    border-radius: 50%;
-    z-index: 100;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  cursor: pointer;
+  background-color: rgba(0, 0, 0, 0.6);
+  color: white;
+  font-size: 2rem;
+  border: none;
+  padding: 0.5rem 0.9rem;
+  border-radius: 50%;
+  z-index: 5;
+  transition: background 0.3s ease;
 }
 
-.btn-izquierda-carrousel {
-    left: 0px;
+.btn-izquierda-carrousel:hover,
+.btn-derecha-carrousel:hover {
+  background-color: #ff9800;
 }
 
-.btn-derecha-carrousel {
-    right: 0px;
-}
+.btn-izquierda-carrousel { left: 10px; }
+.btn-derecha-carrousel { right: 10px; }
 
-
-body{
-    margin: 0;
-    padding: 0;
-    font-family: "Ubuntu", sans-serif;
-    font-weight: 700;
-
- 
-}
-header {
-    display: flex;
-    justify-content: space-between;
-    align-content: center;
-    padding:0 0%;
-    width: 100%;
-    height: auto;
-    background-color: #d9d9d9 ;
-    margin: 0;
-    opacity: 0.75;
-    position: relative;
-    z-index: 2;
-}
-section {
-  
-    color: #d9d9d9;
-    position: relative;
-    z-index: 2;
-    margin: 10%;
-
-}
-h1 {
-    display: flex;
-    justify-content: center;
-    align-content: center;
-    font-size: 45px;
-    margin: 5%;
-   -webkit-text-stroke-width: 1.5px;
-   -webkit-text-stroke-color: #070b26;
-
-  
-}
-h2 {
-    display: flex;
-    justify-content: center;
-    align-content: center;
-    text-align: center;
-    font-size: 30px;
-    margin: 5%;
-    -webkit-text-stroke-width: 1px;
-   -webkit-text-stroke-color: #070b26;
-}
-video {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 50%;
-    object-fit: cover;
-}
-button {
-    
-    border-radius: 10px;
-    padding: 2%;
-    border-style: none;
-    background-color: #070b26;
-    margin: 0% 2%;
-}
-button :hover{
-  background-color: #d98a29;
-  border-radius: 5px;
-}
-
-.logo, img{
-    
-    width: 27%;
-    margin: 0 5% 0 0;
-
-}
-ul{
-
-    display: flex;
-    justify-content: flex-end;
-    list-style: none;
-   
-}
-
-
-li {
-    margin: 4%;
-    
-}
-li :hover{
-    color: #d98a29;
-}
-
-a {
- text-decoration: none;
- color: #070b26;
+/* --- Footer --- */
+footer {
+  text-align: center;
+  padding: 2rem;
+  background: rgba(15,15,15,0.8);
+  color: #bbb;
+  font-size: 0.9rem;
+  margin-top: 2rem;
 }
