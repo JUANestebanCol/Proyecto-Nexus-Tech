@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="./CSS/style.css" />
+  <title>NexusTech - Carrito de Compras</title>
+</head>
+
+<body>
+  <video muted autoplay loop src="./video/Fondo cibernetico.mp4"></video>
+
+  <!-- Header común -->
+  <header>
+    <div class="logo">
+      <a href="index.html"><img src="./img/Logo.png" alt="Logo NexusTech" /> </a>
+    </div>
+    <nav>
+      <ul>
+        <li><a href="login.html">INICIAR</a></li>
+        <li><a href="signin.html">REGISTRARSE</a></li>
+        <li><a href="contact.html">CONTACTO</a></li>
+        <button><a href="buy.html">🛒</a></button>
+      </ul>
+    </nav>
+  </header>
+
+  <!-- Contenido único de esta página -->
+  <main class="layout">
+    <section id="comprar" class="carrito">
+      <h2>Tu Carrito de Compras</h2>
+      <p>Aquí aparecerán los productos que vayas agregando.</p>
+      <div class="carrito-lista">
+        <!-- Ejemplo de producto en carrito -->
+        <div class="carrito-item">
+          <img src="https://cdn1.totalcommerce.cloud/linalca/web_content/assets/funcionespc.webp" alt="Producto" />
+          <p>Portátil Gamer</p>
+          <span>$2.500.000</span>
+          <button>Eliminar</button>
+        </div>
+      </div>
+      <div class="carrito-total">
+        <h3>Total: $2.500.000</h3>
+        <button>Finalizar compra</button>
+      </div>
+    </section>
+
+    <!-- Aside con productos mejor valorados -->
+    <aside class="productos-mejor-valorados">
+      <details>
+        <summary>⭐ Productos mejor valorados</summary>
+        <ul>
+          <li>📱 Smartphone X Pro</li>
+          <li>💻 Laptop Ultra Slim</li>
+          <li>🎧 Auriculares Inalámbricos</li>
+          <li>⌚ Smartwatch Series 5</li>
+          <li>📷 Cámara Pro 4K</li>
+        </ul>
+      </details>
+    </aside>
+  </main>
+
+  <footer>© 2025 NexusTech</footer>
+  <script src="./JS/scripts.js"></script>
+</body>
+</html>
