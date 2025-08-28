@@ -12,23 +12,22 @@
 
   <!-- Header común -->
   <header>
-      <div class="logo">
-        <link rel="stylesheet" href="#" />
-        <a href="index.html"><img src="./img/Logo.png" alt="Logo NexusTech" /> </a>
-      </div>
-      <nav>
-        <ul>
-          <li><a href="login.html">INICIAR</a></li>
-          <li><a href="signin.html">REGISTRARSE</a></li>
-          <li><a href="contact.html">CONTACTO</a></li>
-          <button><a href="buy.html">🛒</a></button>
-        </ul>
-      </nav>
-    </header>
+    <div class="logo">
+      <a href="index.html"><img src="./img/Logo.png" alt="Logo NexusTech" /> </a>
+    </div>
+    <nav>
+      <ul>
+        <li><a href="login.html">INICIAR</a></li>
+        <li><a href="signin.html">REGISTRARSE</a></li>
+        <li><a href="contact.html">CONTACTO</a></li>
+        <button><a href="buy.html">🛒</a></button>
+      </ul>
+    </nav>
+  </header>
 
   <!-- Contenido único de esta página -->
-  <main>
-    <section id="comprar">
+  <main class="layout">
+    <section id="comprar" class="carrito">
       <h2>Tu Carrito de Compras</h2>
       <p>Aquí aparecerán los productos que vayas agregando.</p>
       <div class="carrito-lista">
@@ -45,6 +44,20 @@
         <button>Finalizar compra</button>
       </div>
     </section>
+
+    <!-- Aside con productos mejor valorados -->
+    <aside class="productos-mejor-valorados">
+      <details>
+        <summary>⭐ Productos mejor valorados</summary>
+        <ul>
+          <li>📱 Smartphone X Pro</li>
+          <li>💻 Laptop Ultra Slim</li>
+          <li>🎧 Auriculares Inalámbricos</li>
+          <li>⌚ Smartwatch Series 5</li>
+          <li>📷 Cámara Pro 4K</li>
+        </ul>
+      </details>
+    </aside>
   </main>
 
   <footer>© 2025 NexusTech</footer>

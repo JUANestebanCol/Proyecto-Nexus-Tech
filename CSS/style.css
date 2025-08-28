@@ -176,3 +176,60 @@ footer {
   font-size: 0.9rem;
   margin-top: 2rem;
 }
+
+/* --- Aside: Productos mejor valorados --- */
+.productos-mejor-valorados {
+  flex: 1 1 30%;
+  max-width: 300px;
+  margin: 20px auto;
+  font-family: Arial, sans-serif;
+}
+
+/* Caja del aside */
+.productos-mejor-valorados details {
+  border: 1px solid #ddd;
+  border-radius: 10px;
+  background: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(5px);
+  overflow: hidden;
+}
+
+/* Botón desplegable */
+.productos-mejor-valorados summary {
+  cursor: pointer;
+  padding: 12px;
+  font-weight: bold;
+  font-size: 1.1em;
+  background: rgba(0,0,0,0.2);
+  transition: background 0.3s;
+  color: #fff;
+  list-style: none; /* quita el triangulito por defecto en algunos navegadores */
+}
+
+.productos-mejor-valorados summary:hover {
+  background: rgba(0,0,0,0.4);
+}
+
+/* Contenido animado */
+.productos-mejor-valorados ul {
+  margin: 0;
+  padding: 10px 15px;
+  list-style: none;
+  opacity: 0;
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.4s ease, opacity 0.3s ease;
+  color: #fff;
+}
+
+.productos-mejor-valorados details[open] ul {
+  opacity: 1;
+  max-height: 500px; /* suficiente para mostrar la lista */
+}
+
+/* Estilos para los items */
+.productos-mejor-valorados li {
+  padding: 8px 0;
+  border-bottom: 1px solid rgba(255,255,255,0.2);
+}
+
