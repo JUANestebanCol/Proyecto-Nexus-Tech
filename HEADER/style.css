@@ -163,11 +163,16 @@ button {
     justify-content: center;
     gap: 20px;
 }
+
+input{
+    border-radius: 5px;
+    border-style: none;
+}
 /**aqui termina**/
 
 /**aqui empieza los estilos del formato de inicio de sesión**/
 .registro{
-opacity: 0.9;
+    opacity: 0.9;
     color: blue;
     text-align: center;
     margin-top: 20px;
