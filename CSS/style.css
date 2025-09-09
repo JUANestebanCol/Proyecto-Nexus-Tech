@@ -1,6 +1,16 @@
 @import url('https://fonts.googleapis.com/css2?family=Ubuntu:wght@300;400;500;700&display=swap');
 
-/* --- Reset global --- */
+html, body {
+  height: 100%;
+}
+
+body {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+/** --- Reset global --- **/
 * {
   margin: 0;
   padding: 0;
@@ -15,7 +25,7 @@ body {
   line-height: 1.6;
 }
 
-/* --- Header --- */
+/** --- Header --- **/
 header {
   display: flex;
   justify-content: space-between;
@@ -37,7 +47,7 @@ header {
   transform: scale(1.05);
 }
 
-/* --- Navegación --- */
+/** --- Navegación --- **/
 nav ul {
   display: flex;
   list-style: none;
@@ -72,7 +82,7 @@ button:hover {
   box-shadow: 0 6px 12px rgba(0,0,0,0.3);
 }
 
-/* --- Hero (títulos) --- */
+/** --- Hero (títulos) --- **/
 section h1 {
   text-align: center;
   font-size: 3rem;
@@ -87,7 +97,7 @@ section h2 {
   -webkit-text-stroke: 0.5px #070b26;
 }
 
-/* --- Fondo video --- */
+/** --- Fondo video --- **/
 video {
   position: fixed;
   top: 0;
@@ -99,7 +109,7 @@ video {
   opacity: 0.5;
 }
 
-/* --- Carrusel --- */
+/** --- Carrusel --- **/
 .contendedor-carrousel-1,
 .contendedor-carrousel-2 {
   position: relative;
@@ -142,7 +152,7 @@ video {
   color: #f5f5f5;
 }
 
-/* --- Botones carrusel --- */
+/** --- Botones carrusel --- **/
 .btn-izquierda-carrousel,
 .btn-derecha-carrousel {
   position: absolute;
@@ -169,16 +179,26 @@ video {
 
 /**aqui empieza los estilos del formato de inicio de sesión**/
 .sesion {
-    color: blue;
+  color: #1a237e;
+  text-align: center;
+  margin-top: 40px;
+  background: rgb(220, 217, 217);
+  padding: 48px 40px 40px 40px;
+  border-radius: 32px;
+  box-shadow: 0 4px 32px rgba(0, 0, 0, 0.18);
+  max-width: 420px;
+  margin-left: auto;
+  margin-right: auto;
+  font-size: 1.2rem;
+}
+
+.TituloFormularios {
     text-align: center;
-    margin-top: 20px;
-    background: rgb(220, 217, 217);
-    padding: 30px;
-    border-radius: 30px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-    max-width: 300px;
-    margin-left: auto;
-    margin-right: auto;
+    font-size: 2rem;
+    margin-bottom: 10px;
+    color: #020202;
+    font-weight: 700;
+    -webkit-text-stroke: 1px #070b26;
 }
 
 button:hover {
@@ -190,41 +210,56 @@ button:hover {
 }
 
 .boton2 {
-    padding: 10px, 20px;
-    border-radius: 5px;
-    background-color: rgb(109, 106, 158);
-    color: #fffafa;
-    font-style: bold;
-    border: none;
-    cursor: pointer;
-    text-align: center;
-    width: 100px;
-    height: 50px;
+  padding: 12px 0;
+  border-radius: 7px;
+  background-color: rgb(109, 106, 158);
+  color: #fffafa;
+  font-weight: bold;
+  border: none;
+  cursor: pointer;
+  text-align: center;
+  width: 130px;
+  height: 52px;
+  font-size: 1.05rem;
 }
 button {
-    padding: 10px, 20px;
-    border-radius: 5px;
-    background-color: rgb(114, 120, 164);
-    color: #f7f7ff;
-    font-style: bold;
-    border: none;
-    cursor: pointer;
-    text-align: center;
-    width: 100px;
-    height: 50px;
-    margin-top: 5px;
-    margin-bottom: 5px;
+  padding: 12px 0;
+  border-radius: 7px;
+  background-color: rgb(114, 120, 164);
+  color: #f7f7ff;
+  font-weight: bold;
+  border: none;
+  cursor: pointer;
+  text-align: center;
+  width: 130px;
+  height: 52px;
+  margin-top: 5px;
+  margin-bottom: 5px;
+  font-size: 1.05rem;
 }
 
 .boton-container {
-    display: flex;
-    justify-content: center;
-    gap: 20px;
+  display: flex;
+  justify-content: center;
+  gap: 24px;
+  margin-top: 18px;
 }
 
-input{
-    border-radius: 5px;
-    border-style: none;
+input {
+  border-radius: 7px;
+  border-style: none;
+  font-size: 1.1rem;
+  padding: 12px 16px;
+  margin: 14px 0;
+  width: 90%;
+  background: #f5f5f5;
+  color: #222;
+  box-shadow: 0 1px 4px rgba(0,0,0,0.07);
+  outline: none;
+  transition: box-shadow 0.2s;
+}
+input:focus {
+  box-shadow: 0 2px 8px #ff9800a0;
 }
 /**aqui termina**/
 
@@ -255,11 +290,12 @@ footer {
 }
 
 .site-footer {
-    background-color: #fff;
-    color: #000;
-    padding: 40px 20px;
-    font-family: Arial, sans-serif;
-    border-top: 1px solid #e0e0e0;
+  background-color: #fff;
+  color: #000;
+  padding: 40px 20px;
+  font-family: Arial, sans-serif;
+  border-top: 1px solid #e0e0e0;
+  margin-top: auto;
 }
 .site-footer img {
   width: 40px;
@@ -491,4 +527,109 @@ footer {
   .laptop-img {
     height: 150px;
   }
+}
+
+/* --- Contacto: Título y descripción de contacto --- */
+.contact-title {
+  text-align: center;
+  font-size: 2.1rem;
+  color: #000000;
+  font-weight: 700;
+  margin-bottom: 8px;
+  letter-spacing: 0.5px;
+  font-family: 'Ubuntu', Arial, sans-serif;
+  padding-bottom: 6px;
+  border-radius: 8px 8px 0 0;
+  box-shadow: 0 2px 8px rgba(255,152,0,0.04);
+}
+
+.contact-desc {
+  display: inline-block;
+  text-align: center;
+  font-size: 1.08rem;
+  color: #333;
+  margin-bottom: 18px;
+  font-family: 'Ubuntu', Arial, sans-serif;
+  background: rgba(255,255,255,0.85);
+  border-radius: 12px;
+  padding: 8px 22px 4px 22px;
+  box-shadow: 0 1px 4px rgba(0,0,0,0.03);
+  margin-left: auto;
+  margin-right: auto;
+}
+#contacto {
+  text-align: center;
+}
+/* --- Contacto: Título y botón --- */
+#contacto h2 {
+  text-align: center;
+  font-size: 2.3rem;
+  color: #000000;
+  font-weight: 800;
+  margin-bottom: 10px;
+  letter-spacing: 1px;
+  -webkit-text-stroke: 1px #ffffff;
+  text-shadow: 0 2px 12px #ff980055, 0 1px 0 #fff;
+}
+
+.contact-form button {
+  display: block;
+  margin: 18px auto 0 auto;
+}
+/* --- Contacto Formulario --- */
+.contact-form {
+  background: rgba(255,255,255,0.97);
+  max-width: 420px;
+  margin: 40px auto 48px auto;
+  padding: 36px 32px 28px 32px;
+  border-radius: 28px;
+  box-shadow: 0 4px 32px rgba(0,0,0,0.18);
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+}
+
+.contact-form input,
+.contact-form textarea {
+  border-radius: 7px;
+  border: none;
+  font-size: 1.1rem;
+  padding: 12px 16px;
+  background: #f5f5f5;
+  color: #222;
+  box-shadow: 0 1px 4px rgba(0,0,0,0.07);
+  outline: none;
+  transition: box-shadow 0.2s;
+  width: 100%;
+  resize: none;
+}
+.contact-form input:focus,
+.contact-form textarea:focus {
+  box-shadow: 0 2px 8px #ff9800a0;
+}
+.contact-form textarea {
+  min-height: 90px;
+  max-height: 200px;
+}
+.contact-form button {
+  background: #ff9800;
+  color: #fff;
+  font-weight: 600;
+  border: none;
+  border-radius: 7px;
+  padding: 14px 0;
+  font-size: 1.1rem;
+  cursor: pointer;
+  margin-top: 10px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+  transition: background 0.3s, box-shadow 0.3s;
+}
+.contact-form button:hover {
+  background: #e67e22;
+  box-shadow: 0 4px 16px rgba(0,0,0,0.13);
+}
+.contact-form input::placeholder,
+.contact-form textarea::placeholder {
+  color: #888;
+  opacity: 1;
 }
